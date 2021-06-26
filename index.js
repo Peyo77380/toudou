@@ -16,6 +16,7 @@ mongoose
         })
     .then( () => {
         app.use(express.urlencoded({ extended: true }));
+        app.use(express.json());
         
         // Routing requests :
         app.use('/api/task', require('./src/routes/task'));
