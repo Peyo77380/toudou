@@ -15,7 +15,7 @@ module.exports = {
             err ? response.sendError(err, res) : response.sendSuccessData(task, res);
         });       
     },
-    post: async (req, res) => {
+    store: async (req, res) => {
         const task = new Task(req.body)
 
         await task.save().catch(err => response.sendError(err, res));

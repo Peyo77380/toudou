@@ -1,5 +1,3 @@
-const express = require('express');
-
 module.exports = {
     sendSuccessData: (datas, res, status = "success", code = 200) => {
         return res.status(code).send({
