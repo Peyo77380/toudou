@@ -19,7 +19,8 @@ mongoose
         app.use(express.json());
         
         // Routing requests :
-        app.use('/api/task', require('./src/routes/task'));
+        app.use('/api/task', require('./src/routes/TaskRoutes'));
+        app.use('/api/category', require('./src/routes/CategoryRoutes'));
         
         const port = process.env.API_PORT ? process.env.API_PORT : 3000;
         // Launch server
